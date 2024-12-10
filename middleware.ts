@@ -15,6 +15,7 @@ export default async function middleware(req: Request) {
     "localhost:3000",
     "m4qu14v3l0.com.com",
     "m4qu14v3l0.com",
+    "www.m4qu14v3l0.com",
   ];
 
   // Check if the current hostname is in the list of allowed domains
