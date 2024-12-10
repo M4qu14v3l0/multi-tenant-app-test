@@ -1,12 +1,9 @@
 import { NextResponse } from "next/server";
-import subdomains from "./subdomains.json";
-
-export const config = {
-  matcher: ["/((?!api/|_next/|_static/|_vercel|[\\w-]+\\.\\w+).*)"],
-};
+import subdomains from "../subdomains.json";
 
 export default async function middleware(req: Request) {
-  console.log("running middlware");
+  console.log("Middleware is running!");
+  console.log(`Requested URL: ${req.url}`);
 
   const url = new URL(req.url);
   const hostname = req.headers.get("host") || "";
